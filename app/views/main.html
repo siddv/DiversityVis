@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <h1>Diversity.</h1>
+</div>
+
+<div ng-repeat="company in main.companies" class="row">
+  <h2>{{company.company}}</h2>
+
+  <div class="col col-md-6" ng-repeat="metric in company.metrics">
+    <h3>{{metric.name}}</h3>
+    <pie-chart data-model="metric.values"></pie-chart>
+  </div>
+</div>
